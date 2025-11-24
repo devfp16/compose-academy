@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetpack Compose Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold">🚀 Jetpack Compose Academy</h1>
+                    <p class="text-sm text-purple-100 hidden md:block">Tu ruta hacia el dominio de Compose</p>
+                </div>
+                <button id="menuToggle" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen">
+
+        <!-- Sidebar -->
+        <aside id="sidebar" class="w-80 bg-white shadow-lg overflow-y-auto hidden md:block">
+            <div class="p-6">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">📚 Contenido del Curso</h2>
+
+                <!-- Nivel 1 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <span class="level-badge level-1">Nivel 1</span>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">Fundamentos</span>
+                    </div>
+                    <div class="space-y-1 ml-2">
+                        <div class="sidebar-item p-3 rounded-lg active" data-week="week1"
+                            data-file="SEMANA_01_COMPOSABLES_Y_ESTADO.md">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="font-semibold text-gray-800">Semana 1</div>
+                                    <div class="text-xs text-gray-500">Composables y Estado</div>
+                                </div>
+                                <svg class="week-arrow w-4 h-4 text-gray-600 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                            <div class="week-topics mt-2 ml-2 space-y-1 hidden"></div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg" data-week="week2"
+                            data-file="SEMANA_02_MATERIAL_3_DESIGN_SYSTEM.md">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="font-semibold text-gray-800">Semana 2</div>
+                                    <div class="text-xs text-gray-500">Material 3 Design System</div>
+                                </div>
+                                <svg class="week-arrow w-4 h-4 text-gray-600 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                            <div class="week-topics mt-2 ml-2 space-y-1 hidden"></div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week3">
+                            <div class="font-semibold text-gray-800">Semana 3</div>
+                            <div class="text-xs text-gray-500">Listas y Navigation</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel 2 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <span class="level-badge level-2">Nivel 2</span>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">MVVM</span>
+                    </div>
+                    <div class="space-y-1 ml-2">
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week4">
+                            <div class="font-semibold text-gray-800">Semana 4</div>
+                            <div class="text-xs text-gray-500">ViewModel y Estado</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week5">
+                            <div class="font-semibold text-gray-800">Semana 5</div>
+                            <div class="text-xs text-gray-500">Clean Architecture</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week6">
+                            <div class="font-semibold text-gray-800">Semana 6</div>
+                            <div class="text-xs text-gray-500">Navigation Avanzada</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel 3 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <span class="level-badge level-3">Nivel 3</span>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">Avanzado</span>
+                    </div>
+                    <div class="space-y-1 ml-2">
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week7">
+                            <div class="font-semibold text-gray-800">Semana 7</div>
+                            <div class="text-xs text-gray-500">Animaciones</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week8">
+                            <div class="font-semibold text-gray-800">Semana 8</div>
+                            <div class="text-xs text-gray-500">Performance</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week9">
+                            <div class="font-semibold text-gray-800">Semana 9</div>
+                            <div class="text-xs text-gray-500">Custom Composables</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel 4 -->
+                <div class="mb-6">
+                    <div class="flex items-center mb-3">
+                        <span class="level-badge level-4">Nivel 4</span>
+                        <span class="ml-2 text-sm font-semibold text-gray-700">Profesional</span>
+                    </div>
+                    <div class="space-y-1 ml-2">
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week10">
+                            <div class="font-semibold text-gray-800">Semana 10</div>
+                            <div class="text-xs text-gray-500">Arquitectura Avanzada</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week11">
+                            <div class="font-semibold text-gray-800">Semana 11</div>
+                            <div class="text-xs text-gray-500">Testing</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week12">
+                            <div class="font-semibold text-gray-800">Semana 12</div>
+                            <div class="text-xs text-gray-500">Production Ready</div>
+                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 overflow-y-auto">
+            <div class="container mx-auto px-6 py-8 max-w-5xl">
+
+                <!-- Loading State -->
+                <div id="loading" class="text-center py-20">
+                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+                    <p class="mt-4 text-gray-600">Cargando contenido...</p>
+                </div>
+
+                <!-- Content Container -->
+                <div id="content" class="markdown-content hidden"></div>
+
+                <!-- Error State -->
+                <div id="error" class="hidden text-center py-20">
+                    <div class="text-6xl mb-4">⚠️</div>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-2">Error al cargar el contenido</h2>
+                    <p class="text-gray-600">Por favor, verifica que Live Server esté ejecutándose</p>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
