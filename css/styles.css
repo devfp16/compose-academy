@@ -10,9 +10,9 @@ code {
     font-family: 'JetBrains Mono', monospace;
 }
 
-/* Gradients */
+/* Gradients - Jetpack Compose Theme */
 .gradient-bg {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #4285F4 0%, #4FCF70 100%);
 }
 
 /* Sidebar - Fixed with independent scroll */
@@ -42,13 +42,13 @@ main {
 }
 
 .sidebar-item:hover:not(.cursor-not-allowed) {
-    background-color: rgba(99, 102, 241, 0.1);
+    background-color: rgba(66, 133, 244, 0.1);
     transform: translateX(5px);
 }
 
 .sidebar-item.active {
-    background-color: rgba(99, 102, 241, 0.15);
-    border-left: 4px solid #667eea;
+    background-color: rgba(66, 133, 244, 0.15);
+    border-left: 4px solid #4285F4;
     font-weight: 600;
 }
 
@@ -82,16 +82,16 @@ main {
 }
 
 .topic-link:hover {
-    color: #667eea;
-    background-color: rgba(99, 102, 241, 0.05);
-    border-left-color: #667eea;
+    color: #4285F4;
+    background-color: rgba(66, 133, 244, 0.05);
+    border-left-color: #4285F4;
     padding-left: 0.75rem;
 }
 
 .topic-link.active {
-    color: #667eea;
+    color: #4285F4;
     font-weight: 500;
-    border-left-color: #667eea;
+    border-left-color: #4285F4;
 }
 
 /* Content Sections */
@@ -198,7 +198,7 @@ main {
 }
 
 .markdown-content blockquote {
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #4285F4;
     padding-left: 1rem;
     margin: 1rem 0;
     color: #6b7280;

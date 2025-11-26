@@ -21,7 +21,7 @@
             <div class="flex justify-between items-center">
                 <div>
                     <h1 class="text-2xl md:text-3xl font-bold">🚀 Jetpack Compose Academy</h1>
-                    <p class="text-sm text-purple-100 hidden md:block">Tu ruta hacia el dominio de Compose</p>
+                    <p class="text-sm text-green-100 hidden md:block">Tu ruta hacia el dominio de Compose</p>
                 </div>
                 <button id="menuToggle" class="md:hidden text-white">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,10 +77,20 @@
                             </div>
                             <div class="week-topics mt-2 ml-2 space-y-1 hidden"></div>
                         </div>
-                        <div class="sidebar-item p-3 rounded-lg opacity-50 cursor-not-allowed" data-week="week3">
-                            <div class="font-semibold text-gray-800">Semana 3</div>
-                            <div class="text-xs text-gray-500">Listas y Navigation</div>
-                            <div class="text-xs text-amber-600 mt-1">🔒 Próximamente</div>
+                        <div class="sidebar-item p-3 rounded-lg" data-week="week3"
+                            data-file="SEMANA_03_LISTAS_Y_NAVIGATION.md">
+                            <div class="flex justify-between items-center">
+                                <div>
+                                    <div class="font-semibold text-gray-800">Semana 3</div>
+                                    <div class="text-xs text-gray-500">Listas y Navigation</div>
+                                </div>
+                                <svg class="week-arrow w-4 h-4 text-gray-600 transition-transform" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                            <div class="week-topics mt-2 ml-2 space-y-1 hidden"></div>
                         </div>
                     </div>
                 </div>
@@ -168,7 +178,7 @@
 
                 <!-- Loading State -->
                 <div id="loading" class="text-center py-20">
-                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600"></div>
+                    <div class="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
                     <p class="mt-4 text-gray-600">Cargando contenido...</p>
                 </div>
 
