@@ -29,9 +29,9 @@ code {
 main {
     margin-left: 320px;
     /* Width of sidebar (80 * 4 = 320px) */
-    height: calc(100vh - 0px);
+    height: calc(95vh - 0px);
     overflow-y: auto;
-    padding-top: 2rem;
+    padding-top: 1rem;
     /* Add space at top so header doesn't cover content */
 }
 
